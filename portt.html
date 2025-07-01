@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Durga Reddy | Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+        }
+        header {
+            background: #fff;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo {
+            font-weight: bold;
+            font-size: 24px;
+            color: #2c3e50;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li a {
+            color: #2c3e50;
+            text-decoration: none;
+        }
+        section {
+            padding: 100px 20px 50px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+        .certificate {
+            padding: 20px;
+            background: #ecf0f1;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .certificate:hover {
+            background: #3498db;
+            color: white;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+        }
+        .modal img {
+            display: block;
+            max-width: 90%;
+            max-height: 80vh;
+            margin: 5% auto;
+            border-radius: 10px;
+        }
+        .modal .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 36px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">durga<span style="color: #3498db;">reddy</span></div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="certifications">
+        <div class="section-title">
+            <h2>My Certifications</h2>
+        </div>
+        <div class="cert-grid">
+            <div class="certificate" onclick="openModal('cert1.jpg')">Certificate 1</div>
+            <div class="certificate" onclick="openModal('cert2.jpg')">Certificate 2</div>
+            <div class="certificate" onclick="openModal('cert3.jpg')">Certificate 3</div>
+            <div class="certificate" onclick="openModal('cert4.jpg')">Certificate 4</div>
+            <div class="certificate" onclick="openModal('cert5.jpg')">Certificate 5</div>
+            <div class="certificate" onclick="openModal('cert6.jpg')">Certificate 6</div>
+            <div class="certificate" onclick="openModal('cert7.jpg')">Certificate 7</div>
+            <div class="certificate" onclick="openModal('cert8.jpg')">Certificate 8</div>
+            <div class="certificate" onclick="openModal('cert9.jpg')">Certificate 9</div>
+            <div class="certificate" onclick="openModal('cert10.jpg')">Certificate 10</div>
+        </div>
+    </section>
+
+    <div id="cert-modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="cert-img" src="" alt="Certificate Preview">
+    </div>
+
+    <script>
+        function openModal(imageName) {
+            const modal = document.getElementById("cert-modal");
+            const modalImg = document.getElementById("cert-img");
+            modalImg.src = "certificates/" + imageName; // Images must be inside "certificates" folder
+            modal.style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("cert-modal").style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById("cert-modal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
