@@ -409,19 +409,90 @@
     </div>
     
     <!-- Certifications Section -->
-    <section class="card certifications-section animate-up delay-2">
-      <h2>Certifications</h2>
-      <p>I've completed several certification courses to enhance my technical skills:</p>
-      <div class="certifications">
-        <div class="cert-badge"><i class="fab fa-aws"></i><span>AWS Cloud Practitioner Essentials</span></div>
-        <div class="cert-badge"><i class="fab fa-google"></i><span>Google Cloud Fundamentals</span></div>
-        <div class="cert-badge"><i class="fab fa-microsoft"></i><span>Microsoft Essentials of Gen AI</span></div>
-        <div class="cert-badge"><i class="fas fa-cloud"></i><span>Oracle Cloud Infrastructure Generative AI</span></div>
-        <div class="cert-badge"><i class="fab fa-microsoft"></i><span>Microsoft Azure DevOps Engineering</span></div>
-        <div class="cert-badge"><i class="fas fa-bullseye"></i><span>Digital Marketing Strategies</span></div>
-        <div class="cert-badge"><i class="fab fa-html5"></i><span>HTML5 & CSS Fundamentals</span></div>
-      </div>
-    </section>
+  <!-- Certifications Section with Certificate Images -->
+<style>
+.certifications-section {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 2rem;
+  margin: 2rem 0;
+}
+.certifications-section h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #2186eb;
+}
+.certifications {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.cert-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  background: #f8f8f8;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s;
+}
+.cert-badge:hover {
+  box-shadow: 0 4px 12px rgba(33,134,235,0.12);
+}
+.cert-image {
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.6rem;
+  border: 1px solid #d0d0d0;
+}
+.cert-badge span {
+  font-size: 1rem;
+  text-align: center;
+  color: #282828;
+  margin-top: 0.4rem;
+}
+</style>
+
+<section class="card certifications-section animate-up delay-2">
+  <h2>Certifications</h2>
+  <p>I've completed several certification courses to enhance my technical skills:</p>
+  <div class="certifications">
+    <div class="cert-badge">
+      <img src="images/aws-certificate.jpg" alt="AWS Certificate" class="cert-image">
+      <span>AWS Cloud Practitioner Essentials</span>
+    </div>
+    <div class="cert-badge">
+      <img src="images/google-cloud-certificate.jpg" alt="Google Cloud Certificate" class="cert-image">
+      <span>Google Cloud Fundamentals</span>
+    </div>
+    <div class="cert-badge">
+      <img src="images/microsoft-genai-certificate.jpg" alt="Microsoft Gen AI Certificate" class="cert-image">
+      <span>Microsoft Essentials of Gen AI</span>
+    </div>
+    <div class="cert-badge">
+      <img src="images/oracle-genai-certificate.jpg" alt="Oracle Gen AI Certificate" class="cert-image">
+      <span>Oracle Cloud Infrastructure Generative AI</span>
+    </div>
+    <div class="cert-badge">
+      <img src="images/azure-devops-certificate.jpg" alt="Azure DevOps Certificate" class="cert-image">
+      <span>Microsoft Azure DevOps Engineering</span>
+    </div>
+    <div class="cert-badge">
+      <img src="images/digital-marketing-certificate.jpg" alt="Digital Marketing Certificate" class="cert-image">
+      <span>Digital Marketing Strategies</span>
+    </div>
+    <div class="cert-badge">
+      <img src="images/html-css-certificate.jpg" alt="HTML5 & CSS Certificate" class="cert-image">
+      <span>HTML5 & CSS Fundamentals</span>
+    </div>
+  </div>
+</section>
+
+
     
     <!-- Internship Section -->
     <section class="card internships animate-up delay-3">
@@ -503,4 +574,5 @@
   </footer>
 </body>
 </html>
+
 
